@@ -30,16 +30,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ohyea(View view) {
-        textV.setWidth(50);
+        textV.setTextSize(14);
+        textV.setTextColor(Color.BLACK);
         count++;
-        if (count != 6)
+        if (count%7 != 0)
         {
-            textV.setText("This is a click number: " + count);
+            textV.setText("This is a click number: "+ count);
         }
         else
         {
-            textV.setText("Enough to click. Go to new start!");
-            count = 0;
+            textV.setTextSize(30);
+            textV.setTextColor(Color.RED);
+            textV.setText("BOOM!");
         }
 
     }
