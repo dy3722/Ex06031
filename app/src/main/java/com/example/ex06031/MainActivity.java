@@ -1,5 +1,6 @@
 package com.example.ex06031;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     TextView textV;
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.btn);
         textV = findViewById(R.id.textV);
+        count = 0;
+
     }
 
     public void ohyea(View view) {
-        textV.setTextSize(30);
-        textV.setText("Oh, yea, I’ve been clicked!");
+        textV.setTextColor(Color.RED);
+        count++;
+        textV.setText("This is a click number: " + count);
     }
 }
